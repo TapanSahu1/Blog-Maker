@@ -1,0 +1,22 @@
+<%-include("partials/header")%>
+
+<form action="/delete" method="post">
+    <h3>Delete a Blog</h3>
+    <input type="text" name="title" class="title" placeholder="Blog-Title" required>
+    <input type="submit" class="btn btn-danger p-1 px-3" value="Delete">
+</form>
+
+<h3>Blogs:</h3>
+<% if(locals.Titles && locals.Length){ %>
+  <ul class="list-group">
+<% for(let i=0;i<Length;i++){ %>
+    <li class="list-group-item list-group-item-action text-center"><a href="<%=Titles[i]%>">
+      <button class="btn w-100"><%= Titles[i].slice(0,-4)%></button>
+      </a></li>
+<% }  %>
+  </ul>
+<% }else{ %>
+  <p>No Blogs left to delete</p>
+  <% } %>
+
+<%-include("partials/footer")%>

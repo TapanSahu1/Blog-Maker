@@ -1,0 +1,10 @@
+<%-include("partials/header")%>
+
+<form action="/create" method="post">
+    <h3>Write a Blog</h3>
+    <input type="text" name="title" class="title" placeholder="Blog-Title" required><br><br>
+    <textarea placeholder="Blog-Content" class="content" name="content" required></textarea><br>
+    <input type="submit" class="btn btn-success" value="Create">
+</form>
+
+<%-include("partials/footer")%>

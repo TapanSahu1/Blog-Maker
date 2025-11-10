@@ -1,0 +1,18 @@
+<%-include("partials/header")%>
+<% if(locals.Titles && locals.Length){ %>
+  <ul class="list-group">
+<% for(let i=0;i<Length;i++){ %>
+    <li class="list-group-item list-group-item-action text-center"><a href="<%=Titles[i]%>">
+      <button class="btn w-100"><%= Titles[i].slice(0,-4)%></button>
+      </a></li>
+<% }  %>
+  </ul>
+<% }else{ %>
+  <p>No Blogs Created yet</p>
+  <% } %>
+  <div class="d-grid gap-3">
+    <a href="/create"><button class="btn btn-success px-5 mt-3 w-100">Create a New Blog</button></a>
+    <a href="/delete"><button class="btn btn-danger px-5 w-100">Delete an existing Blog</button></a>
+  
+  </div>
+<%-include("partials/footer")%>

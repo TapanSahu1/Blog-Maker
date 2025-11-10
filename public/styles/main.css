@@ -1,0 +1,45 @@
+ul{
+    list-style-type: none;
+}
+
+.content{
+    width: 80vw;
+    height: 30vw;
+}
+
+@media(max-width: 800px){
+    .content{
+        height: 80vw;
+    }
+}
+
+.title{
+    width: 60vw;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}
+
+a:link {
+  color: #333;
+}
+
+h2{
+    padding: 10px;
+    border-bottom: solid rgb(60, 58, 58);
+}
+
+h5{
+    border-style: solid;
+    border-radius: 5px;
+    padding: 20px;
+    padding-top: 10px;
+}
+
+footer{
+    width: 100%;
+}
+
